@@ -3,7 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="./assets/icons/site.webmanifest">
+  <link rel="mask-icon" href="./assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="./assets/icons/favicon.ico">
+  <meta name="apple-mobile-web-app-title" content="TechSpecs">
+  <meta name="application-name" content="TechSpecs">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="./assets/icons/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+  <!-- fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,800;1,600&display=swap" rel="stylesheet">
+  <!-- Styles -->
   <link rel="stylesheet" href="./styles/index.css">
   <title>TechSpecs - easly check the specs of any device!</title>
 </head>
@@ -15,8 +29,8 @@
       </div>
       <nav class="container menu-container">
         <ul class="menu">
-          <li class="menu-item"><a href="" class="menu-link">About us</a></li>
-          <li class="menu-item"><a href="" class="menu-link is-active">Brand Guidelines</a></li>
+          <li class="menu-item"><a href="" class="menu-link is-active">About us</a></li>
+          <li class="menu-item"><a href="" class="menu-link">Brand Guidelines</a></li>
           <li class="menu-item"><a href="" class="menu-link">API</a></li>
           <li class="menu-item"><a href="" class="menu-link">Contact</a></li>
           <li class="menu-item"><a href="" class="menu-link">Send Feedback</a></li>
@@ -25,27 +39,41 @@
           <li class="menu-item"><a href="" class="menu-link btn btn-signup">Sign Up</a></li>
           <li class="menu-item"><a href="" class="menu-link">Login</a></li>
         </ul>
-        <a href="" class="btn btn-cta btn-try">Try TechSpecs</a>
+        <a href="" class="btn btn-large btn-try">Try TechSpecs</a>
       </nav>
       <div class="menu-button js-menu-toggler">
         <div class="hamburger-bar"></div>
       </div>
     </div>
   </header>
+
   <div class="hero">
     <div class="container">
       <h2 class="title">What's TechSpecs?</h2>
-      <p class="copy hero-copy">TechSpecs is world’s leading platform for finding and comparing the standardised technical specifications of electronics products.</p>
-      <p class="copy"><span class="emphasized">Our mission is</span> to standardise technical specifications and make it easily accessible to the world.</p>
-      <p class="copy"><span class="emphasized">Our vision is</span> to become the global leader of the specs economy.</p>
-      <div class="btn btn-outline btn-cta btn-hero-cta">See Our Brand Guidelines</div>
+      <p class="subtext">TechSpecs is world’s leading platform for finding and comparing the standardised technical specifications of electronics products.</p>
+      <p class="text"><span class="--emphasized">Our mission is</span> to standardise technical specifications and make it easily accessible to the world.</p>
+      <p class="text"><span class="--emphasized">Our vision is</span> to become the global leader of the specs economy.</p>
+      <div class="btn btn-outline btn-large btn-hero-cta">See Our Brand Guidelines</div>
     </div>
     <div class="hero-bg">
       <div class="hero-bg-cards"></div>
       <div class="hero-bg-mockup"></div>
     </div>
   </div>
-  <div class="best-phone"></div>
+  
+  <div class="best-phone">
+    <div class="container">
+      <h2 class="title --white">Which phone is the best?</h2>
+      <p class="subtext --white">Do you often ask that question to yourself? Then you are in the right place. TechSpecs is a tool for you to quickly browse and find recent specs for thousands of products.</p>
+      <input type="text" name="search-device" id="search-device" class="input-large search-device-input" placeholder="Enter a device name">
+      <label for="search-device" class="subtext --white search-device-label"><span>For example:</span> iPhone X, iPhone XS, iPad, Note 10</label>
+      <a href="" class="btn btn-large">Try it Now</a>
+    </div>    
+    <div class="best-phone-bg">
+      <div class="best-phone-bg-phone"></div>
+    </div>
+  </div>
+  
   <div class="discover"></div>
   <div class="compare"></div>
   <div class="integrate"></div>

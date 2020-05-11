@@ -3,6 +3,9 @@
   --secondary: #EEF2F6;
   --primary-text: #242B2E;
   --secondary-text: #242B2ECC; /* #505558 */
+  --success: #8BD001;
+  --warning: #FF8E76;
+  --danger: #FA624D;
   --hero-bg-color: #DEECF5; /* opacity 40% */
   --padding: 20px;
 
@@ -15,6 +18,7 @@
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
 }
 
 a {
@@ -24,12 +28,16 @@ a {
 
 /* General classes */
 
+/* Layout */
 .container {
-  max-width: 100%;
+  width: 100%;
   padding: 0 20px;
-  position: absolute;
+  /* position: absolute; */
+  position: relative;
+  z-index: 2;
 }
 
+/* Menu */
 .menu {
   list-style: none;
   margin: 0;
@@ -44,6 +52,7 @@ a {
   display: block;
 }
 
+/* Buttons */
 .btn {
   width: 126px;
   height: 42px;
@@ -72,30 +81,88 @@ a {
   box-shadow: none;
 }
 
-.btn-cta {
+.btn-large {
   width: 100%;
   height: 84px;
   font-size: 1.1rem;
 }
 
+/* Text */
 .title {
   font-size: 3rem;
+  line-height: 1em;
   font-weight: 900;
-  letter-spacing: -0.15rem;
+  letter-spacing: -0.06rem;
   color: var(--primary-text);
-  margin: 1.9rem 0;
+  margin: 0.625em 0;
+  display: inline-block;
 }
 
-.copy {
+.subtitle {
+  font-size: 2rem;
+  line-height: 1.125em;
+  font-weight: 800;
+  letter-spacing: -0.04rem;
+  color: var(--primary-text);
+  margin: 0.625em 0;
+}
+
+.text {
   font-size: 1rem;
   line-height: 1.4rem;
   color: var(--primary-text);
-  margin: 1.1rem 0;
+  margin: 1.1em 0;
 }
 
-.emphasized {
+.subtext {
+  font-size: 0.85rem;
+  line-height: 1.4em;
+  color: var(--primary-text);
+  margin: 0;
+  margin-left: 12px;
+  position: relative;
+}
+
+.subtext::before {
+  content: '';
+  display: block;
+  width: 3px;
+  height: 100%;
+  background: var(--primary);
+  position: absolute;
+  top: 0;
+  left: -12px;
+}
+
+/* Modifiers */
+.--white.subtext::before {
+  background: #fff;
+}
+
+.--emphasized {
   font-weight: 600;
   font-style: italic;
+}
+
+.--white {
+  color: #fff;
+}
+
+/* Inputs */
+.input-large {
+  width: 100%;
+  height: 92px;
+  background: #fff;  
+  border: 1px solid #707070;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary-text);
+  padding: 0 28px;
+}
+
+.input-large::placeholder {
+  color: #C3C3C3;
 }
 
 
@@ -121,12 +188,11 @@ a {
 
 /* Hamburger Menu */
 .menu-button {
-  width: 33px;
-  height: 27px;
+  width: 23px;
+  height: 17px;
   display: flex;
   align-items: center;
   cursor: pointer;
-  padding: 5px;
 }
 
 .hamburger-bar {
@@ -192,10 +258,11 @@ a {
   width: 100%;
   background: #fff;
   position: fixed;
-  top: -500px;
+  top: -600px;
   left: 0;
   z-index: -1;
   transition: top 1s cubic-bezier(0,0,.2,1);
+  overflow: hidden;
 }
 
 .menu-container.is-active {
@@ -261,29 +328,12 @@ a {
   border-width: 2px;
 }
 
-.hero-copy {
-  font-size: 0.85rem;
-  margin-left: 12px;
-  position: relative;
-}
-
-.hero-copy::before {
-  content: '';
-  display: block;
-  width: 3px;
-  height: 100%;
-  background: var(--primary);
-  position: absolute;
-  top: 0;
-  left: -12px;
-}
-
 .btn-hero-cta {
   margin-top: 30px;
 }
 
 .hero-bg {
-  width: 100vw;
+  width: 100%;
   height: 700px;
   position: absolute;
   left: 0;
@@ -302,4 +352,44 @@ a {
   background: url('../assets/mockup.png') 10% center no-repeat;
   position: relative;
   top: -80%;
+}
+
+
+/* Best phone */
+.best-phone {
+  height: 1135px;
+  background: linear-gradient(204deg, #28469D 0%, #6C4FA6 100%);
+  position: relative;
+}
+
+.search-device-input {
+  margin-top: 36px;
+}
+
+.search-device-label {
+  display: block;
+  margin: 1em 0 40px;
+}
+
+.search-device-label span {
+  color: #FFFFFF80;
+}
+
+.search-device-label.subtext::before {
+  display: none;
+}
+
+.best-phone-bg {
+  width: 100%;
+  height: 620px;
+  position: absolute;
+  bottom: 80px;
+  left: 0;
+  overflow: hidden;
+}
+
+.best-phone-bg-phone {
+  width: 100%;
+  height: 620px;
+  background: url('../assets/object-phone.svg') 45% center no-repeat;
 }
