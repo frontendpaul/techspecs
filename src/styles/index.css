@@ -32,9 +32,11 @@ a {
 .container {
   width: 100%;
   padding: 0 20px;
-  /* position: absolute; */
-  position: relative;
-  z-index: 2;
+  position: absolute;
+}
+
+.title-wrapper {
+  margin: 35px 0;
 }
 
 /* Menu */
@@ -95,7 +97,7 @@ a {
   letter-spacing: -0.06rem;
   color: var(--primary-text);
   margin: 0.625em 0;
-  display: inline-block;
+  /* display: inline-block; */
 }
 
 .subtitle {
@@ -146,6 +148,11 @@ a {
 
 .--white {
   color: #fff;
+}
+
+.--zindex2 {
+  position: relative;
+  z-index: 2;
 }
 
 /* Inputs */
@@ -362,10 +369,6 @@ a {
   position: relative;
 }
 
-.search-device-input {
-  margin-top: 36px;
-}
-
 .search-device-label {
   display: block;
   margin: 1em 0 40px;
@@ -392,4 +395,123 @@ a {
   width: 100%;
   height: 620px;
   background: url('../assets/object-phone.svg') 45% center no-repeat;
+}
+
+
+/* Discover */
+.cards {
+  width: 100vw;
+  margin: 0 -20px 35px;
+}
+
+.card {
+  width: 100%;
+  height: 288px;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+  text-align: center;
+  background: var(--secondary);
+  padding: 30px;
+}
+
+.card:nth-of-type(even) {
+  background: #fff;
+}
+
+.icon {
+  width: 114px;
+  height: 114px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 14px #0000001A;
+  border-radius: 22px;
+  margin: 0 auto;
+}
+
+.icon-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.015rem;
+  color: #fff;
+  margin-top: -10px;
+}
+
+.icon-img {
+  margin-top: -10px;
+}
+
+.icon-compare {  
+  background: linear-gradient(127deg, #53D1EF 0%, #1976D2 100%);
+}
+
+.icon-compare .icon-img {
+  width: 55px;
+  height: 70px;
+  background: url('../assets/icon-compare.svg') center center/cover no-repeat;
+}
+
+.icon-explore {  
+  background: linear-gradient(311deg, #03A9F4 0%, #7DF4D4 100%);
+}
+
+.icon-explore .icon-img {
+  width: 55px;
+  height: 70px;
+  background: url('../assets/icon-explore.svg') center center/cover no-repeat;
+}
+
+.icon-indiegogo {  
+  background: linear-gradient(134deg, #D39BEB 0%, #EA1579 100%);
+}
+
+.icon-indiegogo .icon-img {
+  width: 75px;
+  height: 90px;
+  background: url('../assets/icon-indiegogo.svg') center center/cover no-repeat;
+  margin-bottom: -10px;
+  margin-top: -20px;
+}
+
+.icon-compare2 {  
+  background: linear-gradient(127deg, #C186FC 0%, #8419D2 100%);
+}
+
+.icon-compare2 .icon-img {
+  width: 55px;
+  height: 70px;
+  background: url('../assets/icon-compare.svg') center center/cover no-repeat;
+}
+
+.icon-ces {  
+  background: linear-gradient(134deg, #EDC97D 0%, #E3755A 100%);
+}
+
+.icon-ces .icon-img {
+  width: 55px;
+  height: 70px;
+  background: url('../assets/icon-ces.svg') center center/cover no-repeat;
+}
+
+.icon-kickstarter {  
+  background: linear-gradient(324deg, #2BD9DE 0%, #2BDE73 100%);
+}
+
+.icon-kickstarter .icon-img {
+  width: 55px;
+  height: 70px;
+  background: url('../assets/icon-kickstarter.svg') center center/cover no-repeat;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  line-height: 1em;
+  margin: 0.9em 0 0;
+}
+
+.card-text {
+  margin: 5px 0 0;
 }
