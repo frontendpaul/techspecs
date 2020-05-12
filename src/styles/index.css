@@ -32,7 +32,8 @@ a {
 .container {
   width: 100%;
   padding: 0 20px;
-  position: absolute;
+  /* position: absolute; */
+  display: inline-block;
 }
 
 .title-wrapper {
@@ -103,7 +104,7 @@ a {
 .subtitle {
   font-size: 2rem;
   line-height: 1.125em;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: -0.04rem;
   color: var(--primary-text);
   margin: 0.625em 0;
@@ -514,4 +515,135 @@ a {
 
 .card-text {
   margin: 5px 0 0;
+}
+
+
+/* Compare section */
+.compare {
+  height: 720px;
+  background: linear-gradient(261deg, #53D1EF 0%, #1976D2 100%);
+  position: relative;
+}
+
+.compare-bg {
+  width: 100%;
+  height: 410px;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.compare-bg-phone1 {
+  width: 500px;
+  height: 600px;
+  background: url('../assets/section-added-4@2x@2x.png') -110px 0/cover no-repeat;
+  position: relative;
+  z-index: 2;
+}
+
+.compare-bg-phone2 {
+  width: 120px;
+  height: 300px;
+  background: url('../assets/section-added-1@2x@2x.png') 0 0 no-repeat;
+  background-size: 160%;
+  position: absolute;
+  right: 0;
+  bottom: -80px;
+}
+
+
+/* Integrate section */
+.integration-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.integration-card-logo {
+  display: block;
+  margin: 55px auto;
+}
+
+.integration-card-description {
+  width: 300px;
+  height: 311px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px 30px 0 0;
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 1.5em;
+  text-align: center;
+  padding: 0 17px;
+  position: relative;
+}
+
+.integration-card-description a {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.wordpress {
+  background: #026087;
+}
+
+.shopify {
+  background: #95BF47;
+}
+
+.youtube {
+  background: #D32F2F;
+}
+
+.techspecs-api {
+  background: var(--primary);
+}
+
+.wordpress::after,
+.shopify::after,
+.youtube::after,
+.techspecs-api::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 12px;
+  bottom: 0;
+  width: 300px;
+  height: 322px;
+  border-radius: 40px 40px 0px 0px;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.wordpress::after {
+  background: linear-gradient(137deg, #026087 0%, #025E84 21%, #087CAD 100%);
+}
+.shopify::after {
+  background: linear-gradient(140deg, #95BF47 0%, #A1EA1B 100%);
+}
+.youtube::after {
+  background: linear-gradient(138deg, #D10404 0%, #FF0505 100%);
+}
+.techspecs-api::after {
+  background: linear-gradient(137deg, #0991CE 0%, #00B0FF 100%);
+}
+
+
+/* Ideas section */
+.ideas {
+  padding: 20px 0;
+}
+
+.ideas .btn {
+  margin: 24px 0;
+}
+
+.ideas .btn:last-of-type {
+  background: #1976D2;
 }
