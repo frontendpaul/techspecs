@@ -34,6 +34,7 @@ a {
   padding: 0 20px;
   /* position: absolute; */
   display: inline-block;
+  /* overflow: hidden; */
 }
 
 .title-wrapper {
@@ -99,6 +100,12 @@ a {
   color: var(--primary-text);
   margin: 0.625em 0;
   /* display: inline-block; */
+  /* overflow: hidden; */
+}
+
+/* Title fix for extra small screens */
+@media(max-width: 360px) {
+  .title { font-size: 2.7rem;}
 }
 
 .subtitle {
@@ -401,8 +408,8 @@ a {
 
 /* Discover */
 .cards {
-  width: 100vw;
-  margin: 0 -20px 35px;
+  width: 100%;
+  padding: 0;
 }
 
 .card {
@@ -567,7 +574,8 @@ a {
 }
 
 .integration-card-description {
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
   height: 311px;
   display: flex;
   flex-direction: column;
@@ -614,7 +622,8 @@ a {
   position: absolute;
   left: 12px;
   bottom: 0;
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
   height: 322px;
   border-radius: 40px 40px 0px 0px;
   opacity: 0.1;
@@ -646,4 +655,56 @@ a {
 
 .ideas .btn:last-of-type {
   background: #1976D2;
+}
+
+
+/* Footer */
+.footer {
+  color: var(--primary-text);
+  background: #fff;
+  padding-top: 35px;
+  padding-bottom: 60px;
+  border-top: 1px solid #EEE;
+}
+
+.footer .logo {
+  width: auto;
+  height: 68px;
+  display: block;
+  margin: 0 auto;
+}
+
+.footer-menus-wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.menu-wrapper {
+  width: 50%;
+}
+
+.menu-wrapper.social {
+  position: relative;
+  top: -75px;
+}
+
+.menu-title {
+  font-size: 1.25rem;
+  margin: 1.5em 0 0.5em;
+}
+
+.footer-menu.menu {
+  text-align: left;
+}
+
+.footer-menu .menu-link {
+  font-size: 1rem;
+  padding: 10px 0;
+}
+
+.legal {
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-align: center;
 }
