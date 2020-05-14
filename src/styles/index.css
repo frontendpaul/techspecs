@@ -41,6 +41,13 @@ a {
   margin: 35px 0;
 }
 
+.section-bg {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  overflow: hidden;
+}
+
 /* Menu */
 .menu {
   list-style: none;
@@ -178,6 +185,24 @@ a {
 
 .input-large::placeholder {
   color: #C3C3C3;
+}
+
+.input-large:focus {
+  /* border: 0; */
+  /* outline: 3px solid #03A9F4FF;
+  outline-offset: -1px; */
+  outline: none;
+  border-color: var(--primary);
+    -webkit-box-shadow: 0 0 0 2px var(--primary);
+    box-shadow: 0 0 0 2px var(--primary);
+    transition: all 0.2s ease;
+  }
+  
+  .input-large:invalid {
+    border-color: var(--danger);
+    -webkit-box-shadow: 0 0 0 2px var(--danger);
+    box-shadow: 0 0 0 2px var(--danger);
+    transition: all 0.2s ease;
 }
 
 
@@ -348,12 +373,8 @@ a {
 }
 
 .hero-bg {
-  width: 100%;
   height: 700px;
-  position: absolute;
-  left: 0;
   bottom: 60px;
-  overflow: hidden;
 }
 
 .hero-bg-cards {
@@ -391,13 +412,17 @@ a {
 }
 
 .best-phone-bg {
+  height: 620px;
+  bottom: 80px;
+}
+/* .best-phone-bg {
   width: 100%;
   height: 620px;
   position: absolute;
   bottom: 80px;
   left: 0;
   overflow: hidden;
-}
+} */
 
 .best-phone-bg-phone {
   width: 100%;
@@ -533,11 +558,7 @@ a {
 }
 
 .compare-bg {
-  width: 100%;
   height: 410px;
-  overflow: hidden;
-  position: absolute;
-  left: 0;
   bottom: 0;
 }
 
@@ -561,6 +582,10 @@ a {
 
 
 /* Integrate section */
+.integrate .title-wrapper {
+  margin-bottom: 0;
+}
+
 .integration-cards {
   display: flex;
   flex-direction: column;
@@ -641,6 +666,24 @@ a {
 }
 .techspecs-api::after {
   background: linear-gradient(137deg, #0991CE 0%, #00B0FF 100%);
+}
+
+.techspecsApi {
+  width: 198px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.techspecsApi::before {
+  content: 'API';
+  display: block;
+  position: absolute;
+  z-index: 2;
+  bottom: 3px;
+  right: 0;
+  color: var(--primary);
+  font-size: 0.8rem;
+  font-weight: 900;
 }
 
 
