@@ -26,6 +26,10 @@ a {
   text-decoration: none;
 }
 
+section {
+  overflow: hidden;
+}
+
 /* General classes */
 
 /* Layout */
@@ -132,7 +136,7 @@ a {
 
 .text {
   font-size: 1rem;
-  line-height: 1.4rem;
+  line-height: 1.4em;
   color: var(--primary-text);
   margin: 1.1em 0;
 }
@@ -338,7 +342,7 @@ a {
 
 .guest-nav .menu-link {
   width: 90px;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 600;
 }
 
@@ -782,7 +786,10 @@ a {
     width: initial;
     display: inline-flex;
     padding: 0 52px;
-    margin: 0 auto;
+  }
+
+  .btn-signup {
+    padding: 0;
   }
 
   .hero {
@@ -804,11 +811,16 @@ a {
   .best-phone {
     height: 960px;
   }
+
+  .search-device-input {
+    padding-right: 180px;
+  }
   
   .best-phone-btn {
     position: absolute;
     top: 4px;
     right: 4px;
+    padding: 0 30px;
   }
 
   .cards {
@@ -864,6 +876,237 @@ a {
 
 }
 
-@media (min-width: 992px) { ... }
+@media (min-width: 992px) {
+  /* General classes */
+  .container {
+    width: 530px;
+    padding-right: 0;
+    position: relative;
+    z-index: 2;
+  }
 
-@media (min-width: 1200px) { ... }
+  .title {
+    font-size: 4.5rem;
+    line-height: 1.2em;
+    margin-bottom: 0.35em;
+  }
+
+  .subtitle {
+    font-size: 3rem;
+    margin: 1em 0;
+  }
+
+  .text,
+  .subtext {
+    font-size: 1.25rem;
+  }
+
+  .section-bg {    
+    position: absolute;
+    bottom: initial;
+    left: initial;
+    top: 0;
+  }
+
+  /* Menu */
+  .top-bar.container {
+    width: 100%;
+  }
+
+  .menu-button,
+  .menu-container .center {
+    display: none;
+  }
+
+  .menu-container {
+    width: auto;
+    height: 100%;
+    position: initial;
+    top: initial;
+    z-index: 1;
+    display: flex;
+    padding: 0;
+  }
+
+  .menu-container .menu {
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+  
+  .menu-container .menu-item {    
+    margin: 0 13px;
+  }
+    
+  .menu-container .menu-item:first-of-type {
+    margin-left: 0;
+  }
+
+  .menu-container .menu-item:last-of-type {
+    margin-right: 0;
+  }
+
+  .menu-container .menu-link {
+    font-size: 0.85rem;
+    padding: 0;
+  }
+
+  .underline {
+    position: relative;
+  }
+
+  .underline::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: width 0.5s ease;
+  }
+
+  .underline:hover::after,
+  .underline:focus::after,
+  .underline:active::after {
+    width: 100%;
+  }
+
+  .menu-link.is-active {
+    font-weight: initial;
+  }
+  
+  .menu-link.is-active.underline::after {
+    width: 100%;
+  }
+
+  .btn-signup {
+    margin-left: 45px;
+    margin-right: -15px;
+  }
+
+
+  /* Hero */
+  .hero {
+    height: 740px;
+  }
+
+  .hero-bg {
+    right: -50%;
+  }
+
+  .hero-bg-cards {
+    background-position: 5% center;
+  }
+
+  /* Best phone */
+  .best-phone {
+    height: 620px;
+  }
+
+  .best-phone .title {
+    width: 550px;
+  }
+
+  .best-phone-bg {
+    right: -30%;
+  }
+
+  
+  /* Discover */
+  .discover .title {
+    width: 400px;
+  }
+  .cards {
+    width: 100%;
+    padding: 0;
+  }
+
+  .card {
+    width: 33.3333333%;
+  }
+  
+  .card:nth-of-type(2),
+  .card:nth-of-type(3),
+  .card:nth-of-type(6) {
+    background: var(--secondary);
+  }
+  
+  .card:nth-of-type(even) {
+    background: #fff;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+    line-height: 1em;
+    margin: 0.9em 0 0;
+  }
+
+  .card-text {
+    font-size: 1rem;
+  }
+
+
+  /* Compare */
+  .compare {
+    height: 500px;
+  }
+
+  .compare-bg {
+    right: 0;
+    height: 100%;
+  }
+
+  .compare-bg-phone4 {
+    width: auto;
+    height: 830px;
+    left: -100px;
+    top: -270px;
+  }
+
+
+  /* Integrate */
+  .integrate .title {
+    width: 500px;
+  }
+
+  .integrate .subtext {
+    width: 230px;
+  }
+
+
+  .integrate .container,
+  .ideas .container,
+  .footer .container {
+    width: 100%;
+  }
+
+  .footer-menus-wrapper {
+    max-width: 80%;
+    left: 40px;
+    margin: 0 auto;
+  }
+
+  .menu-wrapper {
+    width: 25%;
+  }
+
+  .menu-wrapper.social {
+    top: initial;
+  }
+  
+  .legal {
+    margin-top: 2rem;
+  }
+}
+
+@media (min-width: 1200px) {  
+  .top-bar {
+    height: 110px;
+  }
+
+  .logo {
+    height: 56px;
+  }
+}
