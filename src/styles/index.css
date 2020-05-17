@@ -719,6 +719,7 @@ section {
   padding-top: 35px;
   padding-bottom: 60px;
   border-top: 1px solid #EEE;
+  overflow: hidden;
 }
 
 .footer .logo {
@@ -729,13 +730,16 @@ section {
 }
 
 .footer-menus-wrapper {
-  width: 100%;
+  max-width: 380px;
+  margin: 0 auto;
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
 .menu-wrapper {
-  width: 50%;
+  width: 45%;
+  max-width: 140px;
 }
 
 .menu-wrapper.social {
@@ -766,6 +770,13 @@ section {
 
 /* Media Quaries */
 @media (min-width: 576px) {
+  .hero {
+    height: 1160px;
+  }
+
+  .best-phone {
+    height: 1080px;
+  }
 
   .compare {
     height: 540px;
@@ -866,14 +877,6 @@ section {
     width: 320px;
     padding: 45px 0;
   }
-
-  .footer-menus-wrapper {
-    max-width: 500px;
-    margin: 0 auto;
-    position: relative;
-    left: 80px;
-  }
-
 }
 
 @media (min-width: 992px) {
