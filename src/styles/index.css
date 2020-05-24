@@ -35,8 +35,9 @@ section {
 /* Layout */
 .container {
   width: 100%;
-  padding: 0 20px;
-  /* position: absolute; */
+  padding: 0 20px;  
+  position: relative;
+  z-index: 2;
   display: inline-block;
   /* overflow: hidden; */
 }
@@ -63,10 +64,6 @@ section {
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-.menu-item {
-
 }
 
 .menu-link {
@@ -175,6 +172,10 @@ section {
   color: #fff;
 }
 
+.--darker {
+  color: #FFFFFF80;
+}
+
 .--zindex2 {
   position: relative;
   z-index: 2;
@@ -273,14 +274,14 @@ section {
 }
 
 /* Back to original stage */
-.menu-button .hamburger-bar {
+.hamburger-bar {
   transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   transition-duration: 0.1s;
 }
-.menu-button .hamburger-bar:before {
+.hamburger-bar:before {
   transition: top 0.1s 0.14s ease, opacity 0.1s ease;
 }
-.menu-button .hamburger-bar:after {
+.hamburger-bar:after {
   transition: bottom 0.1s 0.14s ease,
     transform 0.1s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
@@ -340,10 +341,9 @@ section {
   margin: 27px 0 30px;
 }
 
-.guest-nav .menu-link {
+.guest-nav-link {
   width: 90px;
   font-size: 0.85rem;
-  font-weight: 600;
 }
 
 .btn-signup {
@@ -411,10 +411,6 @@ section {
 .search-device-label {
   display: block;
   margin: 1em 0 40px;
-}
-
-.search-device-label span {
-  color: #FFFFFF80;
 }
 
 .search-device-label.subtext::before {
@@ -485,16 +481,18 @@ section {
 
 .icon-img {
   margin-top: -10px;
+  width: 55px;
+  height: 70px;
+  background: center center/cover no-repeat;
 }
 
 .icon-compare {  
   background: linear-gradient(127deg, #53D1EF 0%, #1976D2 100%);
 }
 
-.icon-compare .icon-img {
-  width: 55px;
-  height: 70px;
-  background: url('../assets/icon-compare.svg') center center/cover no-repeat;
+.icon-compare .icon-img,
+.icon-compare2 .icon-img {
+  background-image: url('../assets/icon-compare.svg');
 }
 
 .icon-explore {  
@@ -502,9 +500,7 @@ section {
 }
 
 .icon-explore .icon-img {
-  width: 55px;
-  height: 70px;
-  background: url('../assets/icon-explore.svg') center center/cover no-repeat;
+  background-image: url('../assets/icon-explore.svg');
 }
 
 .icon-indiegogo {  
@@ -514,7 +510,7 @@ section {
 .icon-indiegogo .icon-img {
   width: 75px;
   height: 90px;
-  background: url('../assets/icon-indiegogo.svg') center center/cover no-repeat;
+  background-image: url('../assets/icon-indiegogo.svg');
   margin-bottom: -10px;
   margin-top: -20px;
 }
@@ -523,20 +519,12 @@ section {
   background: linear-gradient(127deg, #C186FC 0%, #8419D2 100%);
 }
 
-.icon-compare2 .icon-img {
-  width: 55px;
-  height: 70px;
-  background: url('../assets/icon-compare.svg') center center/cover no-repeat;
-}
-
 .icon-ces {  
   background: linear-gradient(134deg, #EDC97D 0%, #E3755A 100%);
 }
 
 .icon-ces .icon-img {
-  width: 55px;
-  height: 70px;
-  background: url('../assets/icon-ces.svg') center center/cover no-repeat;
+  background-image: url('../assets/icon-ces.svg');
 }
 
 .icon-kickstarter {  
@@ -544,9 +532,7 @@ section {
 }
 
 .icon-kickstarter .icon-img {
-  width: 55px;
-  height: 70px;
-  background: url('../assets/icon-kickstarter.svg') center center/cover no-repeat;
+  background-image: url('../assets/icon-kickstarter.svg');
 }
 
 .card-title {
@@ -568,27 +554,17 @@ section {
   overflow: hidden;
 }
 
-.compare .container {
-  position: relative;
-  z-index: 2;
-}
-
 .compare-bg {
   height: 370px;
   position: absolute;
   bottom: 0;
 }
 
-.compare-bg > div {
-  width: 375px;
-  margin: 0 auto;
-}
-
 .compare-bg-phone4 {
   height: 370px;
   width: 525px;
   position: relative;
-  left: -100px;
+  /* left: -24px; */
 }
 
 
@@ -703,11 +679,11 @@ section {
   padding: 20px 0;
 }
 
-.ideas .btn {
+.ideas-btn {
   margin: 24px 0;
 }
 
-.ideas .btn:last-of-type {
+.ideas-btn:last-of-type {
   background: #1976D2;
 }
 
@@ -722,7 +698,7 @@ section {
   overflow: hidden;
 }
 
-.footer .logo {
+.footer-logo {
   width: auto;
   height: 68px;
   display: block;
@@ -752,11 +728,14 @@ section {
   margin: 1.5em 0 0.5em;
 }
 
-.footer-menu.menu {
-  text-align: left;
+.footer-menu {  
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.footer-menu .menu-link {
+.footer-menu-link {
+  display: block;
   font-size: 1rem;
   padding: 10px 0;
 }
@@ -782,7 +761,7 @@ section {
     height: 540px;
   }
   .compare-bg-phone4 {
-    left: -125px;
+    left: -65px;
   }
 }
 
@@ -799,8 +778,9 @@ section {
     padding: 0 52px;
   }
 
-  .btn-signup {
-    padding: 0;
+  .guest-nav-link {
+    width: 90px;
+    padding: 13px 0;
   }
 
   .hero {
@@ -873,7 +853,7 @@ section {
     margin: 0 auto;
   }
 
-  .ideas .btn {
+  .ideas-btn {
     width: 320px;
     padding: 45px 0;
   }
@@ -882,10 +862,15 @@ section {
 @media (min-width: 992px) {
   /* General classes */
   .container {
-    width: 530px;
     padding-right: 0;
-    position: relative;
-    z-index: 2;
+  }
+
+  .cont-530 {
+    width: 530px;
+  }
+
+  .cont-480 {
+    width: 480px;
   }
 
   .title {
@@ -912,8 +897,8 @@ section {
   }
 
   /* Menu */
-  .top-bar.container {
-    width: 100%;
+  .top-bar {    
+    padding-right: 40px;
   }
 
   .menu-button,
@@ -931,25 +916,25 @@ section {
     padding: 0;
   }
 
-  .menu-container .menu {
+  .menu {
     display: flex;
     align-items: center;
     margin: 0;
   }
   
-  .menu-container .menu-item {    
+  .menu-item {    
     margin: 0 13px;
   }
     
-  .menu-container .menu-item:first-of-type {
+  .menu-item:first-of-type {
     margin-left: 0;
   }
 
-  .menu-container .menu-item:last-of-type {
+  .menu-item:last-of-type {
     margin-right: 0;
   }
 
-  .menu-container .menu-link {
+  .menu-link {
     font-size: 0.85rem;
     padding: 0;
   }
@@ -1057,14 +1042,13 @@ section {
   }
 
   .compare-bg {
-    right: 0;
     height: 100%;
   }
 
   .compare-bg-phone4 {
     width: auto;
     height: 830px;
-    left: -100px;
+    left: 300px;
     top: -270px;
   }
 
@@ -1075,14 +1059,7 @@ section {
   }
 
   .integrate .subtext {
-    width: 230px;
-  }
-
-
-  .integrate .container,
-  .ideas .container,
-  .footer .container {
-    width: 100%;
+    width: 330px;
   }
 
   .footer-menus-wrapper {
