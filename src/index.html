@@ -23,62 +23,68 @@
 </head>
 <body>
   <header class="header">
-    <div class="container top-bar">
-      <div class="logo">
-        <a href="#" class="logo-link"><img src="./assets/logo.svg" alt="TechSpecs logo" class="logo"></a>
-      </div>
-      <nav class="container menu-container">
-        <ul class="menu">
-          <li class="menu-item"><a href="" class="menu-link is-active underline">About us</a></li>
-          <li class="menu-item"><a href="" class="menu-link underline">Brand Guidelines</a></li>
-          <li class="menu-item"><a href="" class="menu-link underline">API</a></li>
-          <li class="menu-item"><a href="" class="menu-link underline">Contact</a></li>
-          <li class="menu-item"><a href="" class="menu-link underline">Send Feedback</a></li>
-        </ul>
-        <ul class="menu guest-nav">
-          <li class="menu-item"><a href="" class="menu-link guest-nav-link btn btn-signup">Sign Up</a></li>
-          <li class="menu-item"><a href="" class="menu-link guest-nav-link">Login</a></li>
-        </ul>
-        <div class="center">
-          <a href="" class="btn btn-large btn-try">Try TechSpecs</a>
+    <div class="container">
+      <div class="top-bar">
+        <div class="logo">
+          <a href="#" class="logo-link"><img src="./assets/logo.svg" alt="TechSpecs logo" class="logo"></a>
         </div>
-      </nav>
-      <div class="menu-button js-menu-toggler">
-        <div class="hamburger-bar"></div>
+        <nav class="container menu-container">
+          <ul class="menu">
+            <li class="menu-item"><a href="" class="menu-link is-active underline">About us</a></li>
+            <li class="menu-item"><a href="" class="menu-link underline">Brand Guidelines</a></li>
+            <li class="menu-item"><a href="" class="menu-link underline">API</a></li>
+            <li class="menu-item"><a href="" class="menu-link underline">Contact</a></li>
+            <li class="menu-item"><a href="" class="menu-link underline">Send Feedback</a></li>
+          </ul>
+          <ul class="menu guest-nav">
+            <li class="menu-item"><a href="" class="menu-link guest-nav-link btn btn-signup">Sign Up</a></li>
+            <li class="menu-item"><a href="" class="menu-link guest-nav-link">Login</a></li>
+          </ul>
+          <div class="center">
+            <a href="" class="btn btn-large btn-try">Try TechSpecs</a>
+          </div>
+        </nav>
+        <div class="menu-button js-menu-toggler">
+          <div class="hamburger-bar"></div>
+        </div>
       </div>
     </div>
   </header>
 
   <section class="hero">
-    <div class="container cont-530">
-      <div class="title-wrapper">
-        <h2 class="title">What's TechSpecs?</h2>
-        <p class="subtext">TechSpecs is world’s leading platform for finding and comparing the standardised technical specifications of electronics products.</p>
+    <div class="container">
+      <div class="cont-530">
+        <div class="title-wrapper">
+          <h2 class="title">What's TechSpecs?</h2>
+          <p class="subtext">TechSpecs is world’s leading platform for finding and comparing the standardised technical specifications of electronics products.</p>
+        </div>
+        <p class="text"><span class="--emphasized">Our mission is</span> to standardise technical specifications and make it easily accessible to the world.</p>
+        <p class="text"><span class="--emphasized">Our vision is</span> to become the global leader of the specs economy.</p>
+        <div class="btn btn-outline btn-large btn-hero-cta">See Our Brand Guidelines</div>
       </div>
-      <p class="text"><span class="--emphasized">Our mission is</span> to standardise technical specifications and make it easily accessible to the world.</p>
-      <p class="text"><span class="--emphasized">Our vision is</span> to become the global leader of the specs economy.</p>
-      <div class="btn btn-outline btn-large btn-hero-cta">See Our Brand Guidelines</div>
-    </div>
-    <div class="section-bg hero-bg">
-      <div class="hero-bg-cards"></div>
-      <div class="hero-bg-mockup"></div>
+      <div class="section-bg hero-bg">
+        <div class="hero-bg-cards"></div>
+        <div class="hero-bg-mockup"></div>
+      </div>
     </div>
   </section>
   
   <section class="best-phone">
-    <div class="container cont-530">
-      <div class="title-wrapper">
-        <h2 class="title --white">Which phone is the best?</h2>
-        <p class="subtext --white">Do you often ask that question to yourself? Then you are in the right place. TechSpecs is a tool for you to quickly browse and find recent specs for thousands of products.</p>
+    <div class="container">
+      <div class="cont-530">
+        <div class="title-wrapper">
+          <h2 class="title --white">Which phone is the best?</h2>
+          <p class="subtext --white">Do you often ask that question to yourself? Then you are in the right place. TechSpecs is a tool for you to quickly browse and find recent specs for thousands of products.</p>
+        </div>
+        <div class="form-group">
+          <input type="text" name="search-device" id="search-device" class="input-large search-device-input" placeholder="Enter a device name">
+          <label for="search-device" class="subtext --white search-device-label"><span class="--darker">For example:</span> iPhone X, iPhone XS, iPad, Note 10</label>
+          <a href="" class="btn btn-large --zindex2 best-phone-btn">Try it Now</a>
+        </div>
+      </div>    
+      <div class="section-bg best-phone-bg">
+        <div class="best-phone-bg-phone"></div>
       </div>
-      <div class="form-group">
-        <input type="text" name="search-device" id="search-device" class="input-large search-device-input" placeholder="Enter a device name">
-        <label for="search-device" class="subtext --white search-device-label"><span class="--darker">For example:</span> iPhone X, iPhone XS, iPad, Note 10</label>
-        <a href="" class="btn btn-large --zindex2 best-phone-btn">Try it Now</a>
-      </div>
-    </div>    
-    <div class="section-bg best-phone-bg">
-      <div class="best-phone-bg-phone"></div>
     </div>
   </section>
   
@@ -142,16 +148,18 @@
   </section>
 
   <section class="compare">
-    <div class="container cont-480">
-      <div class="title-wrapper">
-        <h2 class="title --white">Compare anything</h2>
-        <p class="subtext --white">With our simple yet powerful comparison tool, you can compare any product with each other to find the best one that suits with your needs.</p>
+    <div class="container">
+      <div class="cont-460">
+        <div class="title-wrapper">
+          <h2 class="title --white">Compare anything</h2>
+          <p class="subtext --white">With our simple yet powerful comparison tool, you can compare any product with each other to find the best one that suits with your needs.</p>
+        </div>
+        <a href="" class="btn btn-large">Start Comparing</a>
       </div>
-      <a href="" class="btn btn-large">Start Comparing</a>
-    </div>
-    <div class="section-bg compare-bg">
-      <div class="center">
-        <img src="./assets/section-added.png" class="compare-bg-phone4" alt="">
+      <div class="section-bg compare-bg">
+        <div class="center">
+          <img src="./assets/section-added.png" class="compare-bg-phone4" alt="">
+        </div>
       </div>
     </div>
   </section>
