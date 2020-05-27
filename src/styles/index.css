@@ -38,7 +38,7 @@ section {
   padding: 0 20px;  
   /* position: relative; */
   /* z-index: 2; */
-  display: inline-block;
+  /* display: inline-block; */
   /* overflow: hidden; */
 }
 
@@ -422,6 +422,7 @@ section {
 
 .best-phone-bg {
   height: 620px;
+  /* width: 600px; */
   bottom: 50px;
 }
 /* .best-phone-bg {
@@ -1010,7 +1011,7 @@ section {
   }
 
   .hero-bg {
-    right: -50%;
+    left: 600px;
     top: 150px;
   }
 
@@ -1029,7 +1030,13 @@ section {
   }
 
   .best-phone-bg {
-    right: -30%;
+    width: 1440px;
+    margin: 0 auto;
+  }
+
+  .best-phone-bg-phone {
+    position: relative;
+    left: 300px;
   }
 
   
@@ -1075,10 +1082,14 @@ section {
     height: 100%;
   }
 
+  .compare-bg .center {
+    justify-content: initial;
+  }
+
   .compare-bg-phone4 {
     width: auto;
     height: 830px;
-    left: 300px;
+    left: 280px;
     top: -270px;
   }
 
@@ -1139,32 +1150,88 @@ section {
   .hero {
     height: 980px;
   }
+  
+  .hero .cont-530 {
+    width: 540px;
+  }
+
+  .hero .text {
+    width: 390px;
+  }
 
   .hero-bg {
+    width: 1440px;
     height: 900px;
-    right: -40%;
+    position: relative;
+    margin: 0 auto;
+    left: 500px;
+    top: -640px;
     /* overflow: auto; */
   }
 
   .hero-bg-cards {
     width: 920px;
     height: 826px;
+    background-size: contain;
   }
   
   .hero-bg-mockup {
     height: 610px;
     width: 920px;
-    top: -600px;
+    top: -590px;
+    background-size: 870px;
   }
 
   .hero-bg-cards,
   .hero-bg-mockup {    
-    background-size: contain;
     background-position: 50px;
   }
 
+  .best-phone {
+    height: 717px;
+    padding: 30px 0;
+  }
+
+  .best-phone .title {
+    width: 600px;
+  }
+
+  .best-phone-bg {
+    height: 717px;
+    padding-top: 90px;
+  }
+
+  .best-phone-bg-phone {
+  }
+
   .cards {
-    max-width: 100%;
+    max-width: 1440px;
     padding: 0;
+  }
+
+  .card {
+    height: 340px;
+  }
+
+  .compare {
+    height: 550px;
+  }
+
+  .integrate .title {
+    width: 550px;
+  }
+
+  .integrate .subtext {
+    width: 370px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .card {
+    height: 310px;
+  }
+
+  .integration-cards {
+    max-width: 100%;
   }
 }
